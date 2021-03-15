@@ -80,7 +80,7 @@ def pilihLogin():
 		pilihLogin()
 def login():
 	os.system('clear')
-	print(log+"\nLogin Heula Atuh :>\n[1]. Login Use Access Token Fb\n[2]. Login Use Cookie Facebook\n")
+	print(log+"\nPlease Login First :>\n[1]. Login Use Access Token Fb\n[2]. Login Use Cookie Facebook\n")
 	pilihLogin()
 def logika():
 	try:
@@ -95,7 +95,7 @@ def logika():
 		time.sleep(2)
 		login()
 	except FileNotFoundError:
-		print('[!] Anda belum login')
+		print('[!] You Must Login First')
 		time.sleep(2)
 		login()
 #class buat ngecrack :v
