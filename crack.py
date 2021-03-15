@@ -80,7 +80,7 @@ def pilihLogin():
 		pilihLogin()
 def login():
 	os.system('clear')
-	print(log+"\nLogin Dolo Bang :>\n[1]. Login Dengan Access Token Fb\n[2]. Login Dengan Cookie Facebook\n")
+	print(log+"\nLogin Heula Atuh :>\n[1]. Login Use Access Token Fb\n[2]. Login Use Cookie Facebook\n")
 	pilihLogin()
 def logika():
 	try:
