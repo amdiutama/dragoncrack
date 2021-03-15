@@ -1,6 +1,6 @@
-###############################
+################################################
 # Mau Recode? Sertain author yg buat :v #
-# Author: Ramdhan Ramadhian | github: Ramdhan7 :v    #
+# Author: RamdhanRamadhian | github: Ramdhan7 :v    #
 ###############################
 
 #import modulenya :v
@@ -11,15 +11,11 @@ try:ua=req.get("https://api-asutoolkit.cloudaccess.host/useragent.txt").text.str
 except req.exceptions.ConnectionError:exit("[!] Kesalahan Pada Koneksi")
 #nama - nama buat logo :v
 try:
-##### LOGO #####
-   _______  ______ _______ _______ _     _
-   |       |_____/ |_____| |       |____/
-   |_____  |    \_ |     | |_____  |    \_
-
-\033[0;93m╔════════════════════════════════════════════╗
-\033[0;93m║\033[0;96m* \033[0;93mAuthor  \033[0;93m : \033[0;93mRamdhan Ramadhian.\033[0;93m                           ║
-\033[0;93m║\033[0;96m* \033[0;93mWhatsApp \033[0;93m: \033[0;93m085220455XXX \033[0;93m                ║
-\033[0;93m╚════════════════════════════════════════════╝"""
+log=pyfiglet.figlet_format('LOGIN')
+title=pyfiglet.figlet_format('CRACK')
+teman=pyfiglet.figlet_format('TEMAN')
+publik=pyfiglet.figlet_format('PUBLIK')
+except:os.system('pip install pyfiglet')
 
 os.system("clear")
 #buat nampung data" :v
