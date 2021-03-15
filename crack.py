@@ -12,7 +12,7 @@ except req.exceptions.ConnectionError:exit("[!] Kesalahan Pada Koneksi")
 #nama - nama buat logo :v
 try:
 ##### LOGO #####
-logo = """ 
+logo = """
    _______  ______ _______ _______ _     _
    |       |_____/ |_____| |       |____/
    |_____  |    \_ |     | |_____  |    \_
@@ -21,7 +21,6 @@ logo = """
 \033[0;93m║\033[0;96m* \033[0;93mAuthor  \033[0;93m : \033[0;93mRamdhan Ramadhian.\033[0;93m                           ║
 \033[0;93m║\033[0;96m* \033[0;93mWhatsApp \033[0;93m: \033[0;93m085220455XXX \033[0;93m                ║
 \033[0;93m╚════════════════════════════════════════════╝"""
-except:os.system('pip install pyfiglet')
 
 os.system("clear")
 #buat nampung data" :v
