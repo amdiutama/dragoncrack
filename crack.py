@@ -1,6 +1,6 @@
 ###############################
 # Mau Recode? Sertain author yg buat :v #
-# Author: RamdhanRamadhian | github: Ramdhan7 :v    #
+# Author: Ramdhan Ramadhian | github: Ramdhan7 :v    #
 ###############################
 
 #import modulenya :v
@@ -11,10 +11,10 @@ try:ua=req.get("https://api-asutoolkit.cloudaccess.host/useragent.txt").text.str
 except req.exceptions.ConnectionError:exit("[!] Kesalahan Pada Koneksi")
 #nama - nama buat logo :v
 try:
-	log=pyfiglet.figlet_format('LOGIN')
-	title=pyfiglet.figlet_format('CRACK')
-	teman=pyfiglet.figlet_format('TEMAN')
-	publik=pyfiglet.figlet_format('PUBLIK')
+	log=pyfiglet.figlet_format('ENTER')
+	title=pyfiglet.figlet_format('DRAGONCRACK')
+	teman=pyfiglet.figlet_format('FRIENDS')
+	publik=pyfiglet.figlet_format('PUBLIC')
 except:os.system('pip install pyfiglet')
 
 os.system("clear")
