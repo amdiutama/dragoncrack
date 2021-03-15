@@ -12,7 +12,6 @@ except req.exceptions.ConnectionError:exit("[!] Kesalahan Pada Koneksi")
 #nama - nama buat logo :v
 try:
 ##### LOGO #####
-logo = """
    _______  ______ _______ _______ _     _
    |       |_____/ |_____| |       |____/
    |_____  |    \_ |     | |_____  |    \_
