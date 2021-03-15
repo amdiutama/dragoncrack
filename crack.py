@@ -24,7 +24,7 @@ idTeman,idPublik=[],[]
 
 #buat logika login dan login pake token :v
 def pilihLogin():
-	pil=input("[?] Pilih yang mana : ")
+	pil=input("[?] Select : ")
 	if(pil in ("","  ","   ","    ","     ","      ","       ")):
 		print("[!] Jangan Kosong\n")
 		pilihLogin()
@@ -265,7 +265,7 @@ class nampung:
 					except:pass
 	#menu buat nentuin mau crack apa + methode apa :v
 	def pilihan(self):
-		pilih=input("[?] Pilih yang mana : ")
+		pilih=input("[?] Select : ")
 		if pilih in ("01","1"):nampung(self.token).sendTeman()
 		elif pilih in ("02","2"):nampung(self.token).sendPublik()
 		elif pilih=="99":
