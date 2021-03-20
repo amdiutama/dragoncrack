@@ -4,19 +4,18 @@ Metode crack super cepat dan menghasilkan akun yang utuh tanpa checkpoint
 ### Install :
 ````bash
 $ pkg update && pkg upgrade 
-$ pkg install python 
-$ pkg install git 
-$ pkg install figlet
-$ pkg install pyfiglet
-$ pkg install ruby
-$ pip install bs4
-$ pip2 install mechanize 
+$ pkg install python -y 
+$ pkg install python3 
+$ pkg install git -y
 $ pip2 install requests 
+$ pip2 install mechanize 
 $ git clone https://github.com/Ramdhan7/dragoncrack
 ````
 ### Run Script :
 ````bash
 $ cd dragoncrack
+$ pip install pyfiglet
+$ pip install bs4
 $ ls
 $ python crack.py
 
