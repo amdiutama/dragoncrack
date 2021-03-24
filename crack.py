@@ -11,7 +11,7 @@ try:ua=req.get("https://api-asutoolkit.cloudaccess.host/useragent.txt").text.str
 except req.exceptions.ConnectionError:exit("[!] Kesalahan Pada Koneksi")
 #nama - nama buat logo :v
 try:
-	log=pyfiglet.figlet_format('DRAGONCRACK')
+	log=pyfiglet.figlet_format('ENTER')
 	title=pyfiglet.figlet_format('DRAGONCRACK')
 	teman=pyfiglet.figlet_format('FRIENDS')
 	publik=pyfiglet.figlet_format('PUBLIC')
