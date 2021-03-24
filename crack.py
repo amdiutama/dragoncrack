@@ -11,7 +11,7 @@ try:ua=req.get("https://api-asutoolkit.cloudaccess.host/useragent.txt").text.str
 except req.exceptions.ConnectionError:exit("[!] Kesalahan Pada Koneksi")
 #nama - nama buat logo :v
 try:
-	log=pyfiglet.figlet_format('ENTER')
+	log=pyfiglet.figlet_format('DRAGONCRACK')
 	title=pyfiglet.figlet_format('DRAGONCRACK')
 	teman=pyfiglet.figlet_format('FRIENDS')
 	publik=pyfiglet.figlet_format('PUBLIC')
@@ -80,7 +80,7 @@ def pilihLogin():
 		pilihLogin()
 def login():
 	os.system('clear')
-	print(log+"\nPlease Login First :>\n[1]. Login Use Access Token Fb\n[2]. Login Use Cookie Facebook\n")
+	print(log+"\nPlease Login First :>\n[1]. Login With Access Token Fb\n[2]. Login With Cookie Facebook\n")
 	pilihLogin()
 def logika():
 	try:
@@ -228,7 +228,7 @@ class nampung:
 		global idPublik
 		os.system('clear')
 		print(publik+"\nSubscribe Youtube Ramdhan Ramadhian ID | Stop? CTRL + Z\n")
-		print('\n[!] Pilih Methode Crack\n[1]. Methode Mbasic (Sedang, tidak cp semua)\n[2]. Methode Api (Cepat, kemungkinan cp semua)\n')
+		print('\n[!] Pilih Methode Crack\n[1]. Methode Mbasic (Sedang, sebagian hasilnya jebol)\n[2]. Methode Api (Cepat, kemungkinan cp semua)\n')
 		pi=input("[?] Mau methode mana : ")
 		print("")
 		target=input("[?] ID FB target/publik : ")
