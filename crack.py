@@ -86,7 +86,7 @@ def logika():
 	try:
 		token=open('log.txt','r').read()
 		r=json.loads(req.get(f"https://graph.facebook.com/me?access_token={token}").text)
-		print('[√] Antum soedah login\nNama akun antum :',r['name'])
+		print('[√] You Have Already Logged in\nYour Account Name :',r['name'])
 		time.sleep(2)
 		nampung(token).menu()
 	except KeyError:
@@ -95,7 +95,7 @@ def logika():
 		time.sleep(2)
 		login()
 	except FileNotFoundError:
-		print('[!] Antum Beloem Login ')
+		print('[!] Please Login First Uncle ')
 		time.sleep(2)
 		login()
 #class buat ngecrack :v
@@ -228,7 +228,7 @@ class nampung:
 		global idPublik
 		os.system('clear')
 		print(publik+"\nSubscribe Youtube Ramdhan Ramadhian ID | Stop? CTRL + Z\n")
-		print('\n[!] Select Methode Crack\n[1]. Methode Mbasic (Medium, tidak cp semua)\n[2]. Methode Api (Fast, kemungkinan cp semua)\n')
+		print('\n[!] Select Methode Crack\n[1]. Methode Mbasic (Medium, some results will successful)\n[2]. Methode Api (Fast, all hit by checkpoints)\n')
 		pi=input("[?] Mau methode mana : ")
 		print("")
 		target=input("[?] ID FB target/public : ")
