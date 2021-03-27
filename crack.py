@@ -277,7 +277,7 @@ class nampung:
 	def menu(self):
 		os.system("clear")
 		r=json.loads(req.get(f"https://graph.facebook.com/me?access_token={self.token}").text)
-		print(title+"\nUID :",r['id'],"\nNAMA :",r['name'],"\nTTL-AKUN :",r['birthday'],"\n=============================\n[1]. Crack ID FriendsList\n[2]. Crack ID Teman/Publik\n[99]. Hapus Cookies\n")
+		print(title+"\nUID :",r['id'],"\nNAME :",r['name'],"\nDATE-ACCOUNT :",r['birthday'],"\n=============================\n[1]. Crack ID FriendsList\n[2]. Crack ID Friends/Public\n[99]. Delete Cookies\n")
 		nampung(self.token).pilihan()
 		
 #running :v		
