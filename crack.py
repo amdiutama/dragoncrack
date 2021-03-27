@@ -43,7 +43,7 @@ def pilihLogin():
 			login()
 	elif(pil in ("2","02")):
 		cookie=input("[!] Masukan Cookie Fb Anda : ")
-		tomken=req.get('https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_', headers={'user-agent': 'Mozilla/5.0 (Linux; Android 9; Redmi 7A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 Mobile Safari/537.36', 
+		tomken=req.get('https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_', br.addheaders =[('user-agent': 'Mozilla/5.0 (Linux; Android 9; Redmi 7A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 Mobile Safari/537.36')] 
            'referer': 'https://m.facebook.com/', 
            'host': 'm.facebook.com', 
            'origin': 'https://m.facebook.com', 
